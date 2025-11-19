@@ -1,0 +1,114 @@
+:root {
+  --night: #0f172a;
+  --slate: #1e293b;
+  --gray: #334155;
+  --accent: #6366f1;
+  --accent-light: #818cf8;
+  --text: #e2e8f0;
+  --text-dark: #94a3b8;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+.portfolio {
+  padding: 4rem 1rem;
+  background: var(--night);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+.portfolio__head {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.portfolio__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--accent-light), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.portfolio__subtitle {
+  margin-top: 0.5rem;
+  color: var(--text-dark);
+}
+/* Botones de filtro */
+.portfolio__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--gray);
+  background: transparent;
+  color: var(--text-dark);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+/* Grilla de proyectos */
+.portfolio__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.project {
+  background: var(--slate);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+.project__img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.project__body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.project__desc {
+  flex: 1;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.project__link {
+  align-self: flex-start;
+  color: var(--accent-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+.project__link:hover {
+  text-decoration: underline;
+}
+/* Ocultar proyectos al filtrar (JS mínimo) */
+.project.hidden {
+  display: none;
+}

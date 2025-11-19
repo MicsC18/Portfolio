@@ -1,0 +1,60 @@
+.Tecnologias {
+  height: auto;
+  width: 100%;
+  padding: 50px 0;
+  background: linear-gradient(135deg, #0d1117, #1a1b40, #0f1120);
+  text-align: center;
+  color: var(--text-primary);
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.Tecnologias h5 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa); /* celeste a violeta */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logos {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: slide 25s linear infinite;
+}
+
+.logos-slide img {
+  height: 65px;
+  margin: 0 35px;
+  vertical-align: middle;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  border-radius: 16px;
+
+  /* Glass effect */
+  -webkit-backdrop-filter: blur(6px); /* soporte Safari/iOS */
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+.logos-slide img:hover {
+  transform: scale(1.15) rotate(-3deg);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+}
+
+/* Animación continua */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

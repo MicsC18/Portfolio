@@ -1,0 +1,44 @@
+.footer-section {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 40px;
+  position: relative;
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto; /* centrado con margen inferior */
+  max-width: 250px;
+}
+
+.accent-line {
+  height: 1px;
+  flex: 1; /* se estira según el ancho */
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-electric),
+    transparent
+  );
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-violet);
+  margin: 0 15px;
+  box-shadow: 0 0 12px var(--accent-violet);
+}
+.textUlt {
+  color: white;
+}
+.highlight-name {
+  color: lightgray;
+}

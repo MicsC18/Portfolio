@@ -1,0 +1,86 @@
+:root {
+  --bg-primary: #0a0a1a;
+  --bg-secondary: #0f1120;
+  --text-primary: #f0f0ff;
+  --text-secondary: #b0b0d0;
+  --accent: #6366f1; /* Violeta azulado */
+  --accent-electric: #3b82f6; /* Azul eléctrico */
+  --accent-violet: #8b5cf6; /* Violeta */
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+header {
+  width: 100%;
+  z-index: 1000;
+  padding: 1.2rem 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+.nav-links a {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--accent-electric),
+    var(--accent-violet)
+  );
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.MC {
+  color: white;
+}
+
+.logo a {
+  background: linear-gradient(
+    to right,
+    var(--accent-electric),
+    var(--accent-violet)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+a {
+  color: var(--accent-electric);
+  text-decoration: none;
+  transition: var(--transition);
+  padding: 10px;
+  font-size: large;
+}
+
+a:hover {
+  color: var(--accent-violet);
+  text-decoration: none;
+}
