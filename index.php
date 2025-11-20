@@ -1,3 +1,3 @@
 <?php
-__DIR__. header('Location: ../Vistas/index.php');
+__DIR__. header('Location: ../Vistas/Index.php');
 ?>
