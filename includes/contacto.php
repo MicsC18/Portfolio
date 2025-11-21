@@ -10,7 +10,7 @@
         <p>📧 Mica.castillo.@gmail.com</p>
         <div class="contact-buttons">
           <button type="button"> <a  href="https://github.com/MicsC18"  target="_blank" rel="noopener noreferrer">GitHub</a></button>
-          <button><a href="../includes/MicaelaCastillocv.pdf" target="_blank">CV</a></button>
+          <button><a href="../includes/Currículum - DesarrolladoraWeb.pdf" target="_blank">CV</a></button>
           <button><a href="https://www.linkedin.com/in/micacastillo"  target="_blank">LinkedIn</a></button>
         </div>
       </div>
